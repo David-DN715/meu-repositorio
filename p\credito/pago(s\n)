@@ -1,0 +1,13 @@
+'''codigo para crédito concedido'''
+
+Meu_empréstimo = float(input("valor concedido ao cliente:\n "))
+
+valor_recebido = float(input("digite o valor pago:"))
+
+Diferença = Meu_empréstimo - valor_recebido
+
+if Diferença == 0:
+print("débito zerado, está pago")
+
+else:
+print("existem débitos em haver", Diferença)
