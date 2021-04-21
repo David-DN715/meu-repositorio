@@ -1,13 +1,19 @@
-'''listas para produtos em vencimento - tabela'''
+#'''listas para produtos em vencimento '''
 #pede para o usuario informar uma quantidade de produtos e depois
 #faz a leitura dessa quantidade, lendo descriçao e vencimento de cada item.
 
 lista_de_vencimento = []
 quantidade = int(input('informe a quantidade:'))
-
+      
 while len(lista_de_vencimento) < quantidade:
   produto = input("descrição do produto:")
-  dia = int(input('informe o mes do vencimento:\t'))
+  mes = int(input('informe o mes do vencimento:\t'))
   ano = int(input('informe o ano de vencimento:\t'))
-  lista_de_vencimento.append([produto, dia, ano])
-  print('\n', lista_de_vencimento)
+  lista_de_vencimento.append([produto, mes, ano])
+
+#O for abaixo verifica a instancia com o metodo isinstance e  imprime cada lista dentro da lista_de_vencimento!
+for i in lista_de_vencimento:
+  if isinstance(i, list):
+    print(i)
+  else:
+    print("Vazio!")  
